@@ -8,3 +8,13 @@ C:\Users\Ben\source\repos\Pong\Pong\obj\Debug\Pong.csproj.GenerateResource.Cache
 C:\Users\Ben\source\repos\Pong\Pong\obj\Debug\Pong.csproj.CoreCompileInputs.cache
 C:\Users\Ben\source\repos\Pong\Pong\obj\Debug\Pong.exe
 C:\Users\Ben\source\repos\Pong\Pong\obj\Debug\Pong.pdb
+C:\Users\Ben\Documents\GitHub\Pong\Pong\bin\Debug\Pong.exe.config
+C:\Users\Ben\Documents\GitHub\Pong\Pong\bin\Debug\Pong.exe
+C:\Users\Ben\Documents\GitHub\Pong\Pong\bin\Debug\Pong.pdb
+C:\Users\Ben\Documents\GitHub\Pong\Pong\obj\Debug\Pong.csprojResolveAssemblyReference.cache
+C:\Users\Ben\Documents\GitHub\Pong\Pong\obj\Debug\Pong.Properties.Resources.resources
+C:\Users\Ben\Documents\GitHub\Pong\Pong\obj\Debug\Pong.csproj.GenerateResource.Cache
+C:\Users\Ben\Documents\GitHub\Pong\Pong\obj\Debug\Pong.csproj.CoreCompileInputs.cache
+C:\Users\Ben\Documents\GitHub\Pong\Pong\obj\Debug\Pong.exe
+C:\Users\Ben\Documents\GitHub\Pong\Pong\obj\Debug\Pong.pdb
+C:\Users\Ben\Documents\GitHub\Pong\Pong\obj\Debug\Pong.Form.resources

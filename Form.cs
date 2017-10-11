@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Pong
 {
-    public partial class Form1 : Form
+    public partial class Form : System.Windows.Forms.Form
     {
         Ball ball;
         private bool isUpPressed, isDownPressed;
@@ -18,10 +18,11 @@ namespace Pong
         private int TopWorld = 0;
         private int BotWorld = 307;
 
-        public Form1()
+        public Form()
         {
             InitializeComponent();
-            ball = new Ball(aBall);
+            ball = new Ball(aBall, Paddle1, Paddle2, P1_Label, P2_Label);
+            this.aBall.BringToFront();
         }
 
 
@@ -47,6 +48,11 @@ namespace Pong
 
         }
 
+        private void Form_Scroll(object sender, ScrollEventArgs e)
+        {
+                ball.AddSpeed();
+        
+        }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
