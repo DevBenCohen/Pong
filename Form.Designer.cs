@@ -29,47 +29,18 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.aBall = new System.Windows.Forms.PictureBox();
-            this.Paddle2 = new System.Windows.Forms.PictureBox();
-            this.Paddle1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form));
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.Score_Label = new System.Windows.Forms.Label();
             this.P1_Label = new System.Windows.Forms.Label();
             this.P2_Label = new System.Windows.Forms.Label();
+            this.aBall = new System.Windows.Forms.PictureBox();
+            this.Paddle2 = new System.Windows.Forms.PictureBox();
+            this.Paddle1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.aBall)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Paddle2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Paddle1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // aBall
-            // 
-            this.aBall.Image = global::Pong.Properties.Resources.Ball_New;
-            this.aBall.Location = new System.Drawing.Point(485, 242);
-            this.aBall.Name = "aBall";
-            this.aBall.Size = new System.Drawing.Size(20, 20);
-            this.aBall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.aBall.TabIndex = 2;
-            this.aBall.TabStop = false;
-            // 
-            // Paddle2
-            // 
-            this.Paddle2.Image = global::Pong.Properties.Resources.Paddle;
-            this.Paddle2.Location = new System.Drawing.Point(911, 165);
-            this.Paddle2.Name = "Paddle2";
-            this.Paddle2.Size = new System.Drawing.Size(20, 200);
-            this.Paddle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Paddle2.TabIndex = 1;
-            this.Paddle2.TabStop = false;
-            // 
-            // Paddle1
-            // 
-            this.Paddle1.Image = global::Pong.Properties.Resources.Paddle;
-            this.Paddle1.Location = new System.Drawing.Point(26, 165);
-            this.Paddle1.Name = "Paddle1";
-            this.Paddle1.Size = new System.Drawing.Size(20, 200);
-            this.Paddle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.Paddle1.TabIndex = 0;
-            this.Paddle1.TabStop = false;
             // 
             // Timer
             // 
@@ -108,6 +79,36 @@
             this.P2_Label.TabIndex = 5;
             this.P2_Label.Text = "0";
             // 
+            // aBall
+            // 
+            this.aBall.Image = global::Pong.Properties.Resources.Ball_New;
+            this.aBall.Location = new System.Drawing.Point(485, 242);
+            this.aBall.Name = "aBall";
+            this.aBall.Size = new System.Drawing.Size(20, 20);
+            this.aBall.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.aBall.TabIndex = 2;
+            this.aBall.TabStop = false;
+            // 
+            // Paddle2
+            // 
+            this.Paddle2.Image = global::Pong.Properties.Resources.Paddle;
+            this.Paddle2.Location = new System.Drawing.Point(911, 165);
+            this.Paddle2.Name = "Paddle2";
+            this.Paddle2.Size = new System.Drawing.Size(20, 200);
+            this.Paddle2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Paddle2.TabIndex = 1;
+            this.Paddle2.TabStop = false;
+            // 
+            // Paddle1
+            // 
+            this.Paddle1.Image = global::Pong.Properties.Resources.Paddle;
+            this.Paddle1.Location = new System.Drawing.Point(26, 165);
+            this.Paddle1.Name = "Paddle1";
+            this.Paddle1.Size = new System.Drawing.Size(20, 200);
+            this.Paddle1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Paddle1.TabIndex = 0;
+            this.Paddle1.TabStop = false;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,9 +121,12 @@
             this.Controls.Add(this.aBall);
             this.Controls.Add(this.Paddle2);
             this.Controls.Add(this.Paddle1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pong Game";
-            this.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Form_Scroll);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.aBall)).EndInit();

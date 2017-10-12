@@ -15,44 +15,51 @@ namespace Pong
         Ball ball;
         private bool isUpPressed, isDownPressed;
         private bool isWPressed, isSPressed;
-        private int TopWorld = 0;
-        private int BotWorld = 307;
+        private int topWorld = 0;
+        private int botWorld = 307;
 
         public Form()
         {
             InitializeComponent();
             ball = new Ball(aBall, Paddle1, Paddle2, P1_Label, P2_Label);
             this.aBall.BringToFront();
+            this.MouseWheel += new MouseEventHandler(Form_MouseWheel);
         }
 
+        private void Form_MouseWheel(object sender, MouseEventArgs e)
+        {
+            if (e.Delta > 0)
+            {
+                this.ball.Add_Speed();
+            }
+            else if (e.Delta < 0)
+            {
+                this.ball.Sub_Speed();
+            }
+        }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
             ball.Move();
             if (this.isUpPressed == true)
             {
-                Paddle2.Location = new Point(Paddle2.Location.X, Math.Max(this.TopWorld, Paddle2.Location.Y - 2));
+                Paddle2.Location = new Point(Paddle2.Location.X, Math.Max(this.topWorld, Paddle2.Location.Y - 3));
             }
             if (this.isDownPressed == true)
             {
-                Paddle2.Location = new Point(Paddle2.Location.X, Math.Min(this.BotWorld, Paddle2.Location.Y + 2));
+                Paddle2.Location = new Point(Paddle2.Location.X, Math.Min(this.botWorld, Paddle2.Location.Y + 3));
             }
             if (this.isWPressed == true)
             {
-                Paddle1.Location = new Point(Paddle1.Location.X, Math.Max(this.TopWorld, Paddle1.Location.Y - 2));
+                Paddle1.Location = new Point(Paddle1.Location.X, Math.Max(this.topWorld, Paddle1.Location.Y - 3));
             }
             if (this.isSPressed == true)
             {
-                Paddle1.Location = new Point(Paddle1.Location.X, Math.Min(this.BotWorld, Paddle1.Location.Y + 2));
+                Paddle1.Location = new Point(Paddle1.Location.X, Math.Min(this.botWorld, Paddle1.Location.Y + 3));
             }
 
         }
 
-        private void Form_Scroll(object sender, ScrollEventArgs e)
-        {
-                ball.AddSpeed();
-        
-        }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
