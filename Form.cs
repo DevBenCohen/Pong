@@ -15,7 +15,7 @@ namespace Pong
         Ball ball;
         private bool isUpPressed, isDownPressed;
         private bool isWPressed, isSPressed;
-        private int topWorld = 0;
+        private int topWorld = 27;
         private int botWorld = 307;
 
         public Form()
@@ -60,6 +60,16 @@ namespace Pong
 
         }
 
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string Message = " - Don't Let The Ball Get Past Your Paddle \n - To Control The Right Paddle Use W & S \n -To Use The Left Paddle Use The Arrows \n Have Fun!";
+            MessageBox.Show(Message, "Rules");
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {

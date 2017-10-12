@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Ping pong.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -86,6 +89,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ball New.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pong Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pong_Sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bar_Sound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ping_pong_26px_1172664_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ping pong.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

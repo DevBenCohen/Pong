@@ -12,7 +12,7 @@ namespace Pong
         Random rnd = new Random();
         private int xSpeed = 1;
         private int ySpeed = 1;
-        private int topWorld = 0;
+        private int topWorld = 27;
         private int botWorld = 485;
         private int leftWorld = 0;
         private int rightWorld = 971;
@@ -36,11 +36,11 @@ namespace Pong
         public void Move()
         {
             int bottom = this.botWorld - ball.Height;
-            ball.Location = new Point(ball.Location.X + this.xSpeed, Math.Max(this.topWorld, Math.Min(this.botWorld, ball.Location.Y + this.ySpeed)));
+            ball.Location = new Point(ball.Location.X + this.xSpeed, Math.Max(this.topWorld, Math.Min(bottom, ball.Location.Y + this.ySpeed)));
             if (ball.Location.Y >= bottom || ball.Location.Y <= this.topWorld)
             {
                 this.ySpeed = this.ySpeed * -1;
-                SoundPlayer sound = new SoundPlayer(@"C:\Users\Ben\Downloads\Bar_Sound.wav");
+                SoundPlayer sound = new SoundPlayer(Properties.Resources.Bar_Sound);
                 sound.Load();
                 sound.Play();
             }
@@ -55,7 +55,7 @@ namespace Pong
             if (this.Paddle1.Bounds.IntersectsWith(this.ball.Bounds) || this.Paddle2.Bounds.IntersectsWith(this.ball.Bounds))
             {
                 this.xSpeed = this.xSpeed * -1;
-                SoundPlayer sound = new SoundPlayer(@"C:\Users\Ben\Downloads\Pong_Sound.wav");
+                SoundPlayer sound = new SoundPlayer(Properties.Resources.Pong_Sound);
                 sound.Load();
                 sound.Play();
             }
